@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/css/bootstrap.min.css"/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+
+
+    <title>Tarefa 5</title>
+  </head>
+  <body>
+
+    <div class="container-fluid">
+      <div class="row flex-nowrap">
+          <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
+              <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+                  <a href="../index.html" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                      <span class="fs-5 d-none d-sm-inline mt-4">Tarefa 5 - Javascript</span>
+                  </a>
+                  <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+                      <li class="nav-item">
+                          <a href="../pages/1.html" class="nav-link align-middle px-0">
+                              <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Exercício 1</span>
+                          </a>
+                      </li>
+                     
+                      <li>
+                          <a href="../pages/2.html" class="nav-link px-0 align-middle">
+                              <i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline">Exercício 2</span></a>
+                      </li>
+                  
+                      <li>
+                          <a href="../pages/3.html" class="nav-link px-0 align-middle">
+                              <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Exercício 3</span> </a>
+                      </li>
+
+                      <li>
+                        <a href="../pages/4.html" class="nav-link px-0 align-middle">
+                            <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Exercício 4</span> </a>
+                    </li>
+
+                    <li>
+                      <a href="../pages/5.html" class="nav-link px-0 align-middle">
+                          <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Exercício 5</span> </a>
+                  </li>
+
+                  <li>
+                    <a href="../pages/6.html" class="nav-link px-0 align-middle">
+                        <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Exercício 6</span> </a>
+                </li>
+
+                <li>
+                  <a href="#" class="nav-link px-0 align-middle">
+                      <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Exercício 7</span> </a>
+              </li>
+                  </ul>
+                  <hr>
+                  <div class=" pb-4">
+                          <img src="../images/avatar.jpeg" alt="hugenerd" width="45" height="55" class="rounded-circle">
+                          <span class="d-none d-sm-inline mx-1">by Jésica Nagata</span>
+                  </div>
+              </div>
+          </div>
+          <div class="col py-3">
+              <h3>Exercício 7</h3>
+              <p class="lead">O custo de um carro novo ao consumidor é obtido com a seguinte fórmula:</p>
+                <p>custo final = custo de fábrica + (custo de fábrica * percentual do distribuidor) + (custo de fábrica * percentual de impostos)</p>
+                <p class="lead">O usuário terá uma tela para entrar com os valores:</p>
+                <ul>
+                  <li>custo de fábrica => nome do input custoFabrica</li>
+                  <li>% distribuidor => nome do input percDistribuidor</li>
+                  <li>% impostos => nome do input percImpostos</li>
+                  <li>Valor final => nome do input valorfinal</li>
+                </ul>
+                Deverá executar o cálculo e demonstrar o resultado no “valorfinal” quando clicar no botão “btncalcular”.
+                <div class="container p-5 my-5 border">
+
+                  <h1 class="text-center">Cálculo - Valor Final</h1>
+                  <div class="input-group mb-3">
+                    <span class="input-group-text">Valor de Fábrica R$:</span>
+                    <input type="text" class="form-control" id="custoFabrica" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                  </div>
+                  <div class="input-group mb-3">
+                    <span class="input-group-text">% Distribuidor: </span>
+                    <input type="text" class="form-control" id="percDistribuidor" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                  </div>
+                  <div class="input-group mb-3">
+                    <span class="input-group-text">% Impostos</span>
+                    <input type="text" class="form-control" id="percImpostos" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                  </div>
+                  <div class="col-12 text-center mb-3">
+                    <button onclick="btncalcular()" type="button" class="btn btn-success btn-lg btn-block">Calcular</button>
+                </div>
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" >Valor Final R$</span>
+                    <input type="text" class="form-control" id="valorfinal" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                  </div>
+                  
+                  
+                </div>
+          </div>
+      </div>
+  </div>
+
+  <script>
+    function btncalcular(){
+      var custoFabrica = document.getElementById('custoFabrica').value;
+      var percDistribuidor = document.getElementById('percDistribuidor').value;
+      var percImpostos = document.getElementById('percImpostos').value;
+
+      var resultado = parseFloat(custoFabrica) + (parseFloat(custoFabrica) * parseFloat(percDistribuidor / 100)) + (parseFloat(custoFabrica * parseFloat(percImpostos / 100))); 
+      document.getElementById('valorfinal').value = resultado;
+
+    }
+  </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/css/bootstrap.min.css" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+
+  <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+
+
+  <title>Tarefa 5</title>
+</head>
+
+<body>
+
+  <div class="container-fluid">
+    <div class="row flex-nowrap">
+      <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
+        <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+          <a href="../index.html"
+            class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+            <span class="fs-5 d-none d-sm-inline mt-4">Tarefa 5 - Javascript</span>
+          </a>
+          <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+            <li class="nav-item">
+              <a href="../pages/1.html" class="nav-link align-middle px-0">
+                <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Exercício 1</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="../pages/2.html" class="nav-link px-0 align-middle">
+                <i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline">Exercício 2</span></a>
+            </li>
+
+            <li>
+              <a href="../pages/3.html" class="nav-link px-0 align-middle">
+                <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Exercício 3</span> </a>
+            </li>
+
+            <li>
+              <a href="../pages/4.html" class="nav-link px-0 align-middle">
+                <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Exercício 4</span> </a>
+            </li>
+
+            <li>
+              <a href="#" class="nav-link px-0 align-middle">
+                <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Exercício 5</span> </a>
+            </li>
+
+            <li>
+              <a href="../pages/6.html" class="nav-link px-0 align-middle">
+                <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Exercício 6</span> </a>
+            </li>
+
+            <li>
+              <a href="../pages/7.html" class="nav-link px-0 align-middle">
+                <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Exercício 7</span> </a>
+            </li>
+          </ul>
+          <hr>
+          <div class=" pb-4">
+            <img src="../images/avatar.jpeg" alt="hugenerd" width="45" height="55" class="rounded-circle">
+            <span class="d-none d-sm-inline mx-1">by Jésica Nagata</span>
+          </div>
+        </div>
+      </div>
+      <div class="col py-3">
+        <h3>Exercício 5</h3>
+        <p class="lead">
+          Fazer uma calculadora que receberá dois valores e a operação (+,-,*,/). Ao clicar no botão calcular o
+          resultado é demonstrado.</p>
+        <div class="container p-5 my-5 border">
+
+          <h1 class="text-center">Calculadora</h1>
+          <div class="container"
+            style="width: 30%; padding: 30px;border: 1px solid grey;margin-top: 50px;background: rgb(168, 163, 163);    box-shadow: 5px 5px #525252;    border-radius: 10px;">
+            <div class="row">
+              <div class="col-lg-12 ">
+                <input type="text" name="calculation" id="calculation" class="form-control"
+                  style="padding: 10px;font-size: 30px;height: 50px;">
+              </div>
+            </div>
+            <div class="row mt-3 mb-3">
+              <div class="col-3 ">
+                <button id="one" class="btn btn-light btn-block btn_font " onclick="UserClickButton('1')">1</button>
+              </div>
+              <div class="col-3 ">
+                <button id="two" class="btn btn-light btn-block btn_font " onclick="UserClickButton('2')">2</button>
+              </div>
+              <div class="col-3 ">
+                <button id="three" class="btn btn-light btn-block btn_font " onclick="UserClickButton('3')">3</button>
+              </div>
+              <div class="col-3 ">
+                <button id="add" class="btn btn-success btn-block btn_font " onclick='UserClickButton("+")'>+</button>
+              </div>
+            </div>
+            <div class="row mt-3 mb-3">
+              <div class="col-3 ">
+                <button id="four" class="btn btn-light btn-block btn_font" onclick='UserClickButton("4")'>4</button>
+              </div>
+              <div class="col-3 ">
+                <button id="five" class="btn btn-light btn-block btn_font" onclick='UserClickButton("5")'>5</button>
+              </div>
+              <div class="col-3 ">
+                <button id="six" class="btn btn-light btn-block btn_font" onclick='UserClickButton("6")'>6</button>
+              </div>
+              <div class="col-3 ">
+                <button id="minus" class="btn btn-success btn-block btn_font" onclick='UserClickButton("-")'>-</button>
+              </div>
+            </div>
+            <div class="row mt-3 mb-3">
+              <div class="col-3 ">
+                <button id="seven" class="btn btn-light btn-block btn_font" onclick='UserClickButton("7")'>7</button>
+              </div>
+              <div class="col-3 ">
+                <button id="eight" class="btn btn-light btn-block btn_font" onclick='UserClickButton("8")'>8</button>
+              </div>
+              <div class="col-3 ">
+                <button id="nine" class="btn btn-light btn-block btn_font" onclick='UserClickButton("9")'>9</button>
+              </div>
+              <div class="col-3 ">
+                <button id="multiply" class="btn btn-success btn-block btn_font"
+                  onclick='UserClickButton("*")'>*</button>
+              </div>
+            </div>
+            <div class="row mt-3 mb-3">
+              <div class="col-3 ">
+                <button id="dot" class="btn btn-light btn-block btn_font" onclick='UserClickButton(".")'>.</button>
+              </div>
+              <div class="col-3 ">
+                <button id="zero" class="btn btn-light btn-block btn_font" onclick='UserClickButton("0")'>0</button>
+              </div>
+              <div class="col-3 ">
+                <button id="equal" class="btn btn-warning btn-block btn_font" onclick='CalculateValue()'>=</button>
+              </div>
+              <div class="col-3 ">
+                <button id="divide" class="btn btn-success btn-block btn_font" onclick='UserClickButton("/")'>/</button>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-12 ">
+                <button class="btn btn-danger  btn-block" onclick="ClearData()">CLEAR</button>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-12 mt-3">
+                <small>Histórico de Cálculos</small>
+              </div>
+              <div class="col-lg-12" id="history_log">
+
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    var input_box = document.getElementById("calculation");
+    var historyData = [];
+    var expressionData = "";
+    var resultData = "";
+    input_box.onkeydown = function () {
+      console.log(input_box.value);
+    };
+
+    function UserClickButton(input) {
+      var oldinput = input_box.value;
+      var newinput = oldinput + input;
+      expressionData = newinput;
+      input_box.value = newinput;
+    }
+    function CalculateValue() {
+      console.log("Click");
+      var input = input_box.value;
+      input = input.replace('"', "").replace("'", "");
+      var result = eval(input);
+      resultData = result;
+      historyData.push({ expression: expressionData, result: resultData });
+      showLogdata();
+      resultData = "";
+      expressionData = "";
+      input_box.value = result;
+    }
+    function ClearData() {
+      input_box.value = "";
+    }
+
+    function showLogdata() {
+      var log = document.getElementById("history_log");
+      var string = "";
+      for (var key in historyData) {
+        string +=
+          "" +
+          historyData[key]["expression"] +
+          " = " +
+          historyData[key]["result"] +
+          "<br>";
+      }
+
+      log.innerHTML = string;
+    }
+  </script>
+
+
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

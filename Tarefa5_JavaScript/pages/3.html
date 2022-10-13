@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/css/bootstrap.min.css"/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+
+
+    <title>Tarefa 5</title>
+  </head>
+  <body>
+
+    <div class="container-fluid">
+      <div class="row flex-nowrap">
+          <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
+              <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+                  <a href="../index.html" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                      <span class="fs-5 d-none d-sm-inline mt-4">Tarefa 5 - Javascript</span>
+                  </a>
+                  <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+                      <li class="nav-item">
+                          <a href="../pages/1.html" class="nav-link align-middle px-0">
+                              <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Exercício 1</span>
+                          </a>
+                      </li>
+                     
+                      <li>
+                          <a href="../pages/2.html" class="nav-link px-0 align-middle">
+                              <i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline">Exercício 2</span></a>
+                      </li>
+                  
+                      <li>
+                          <a href="#" class="nav-link px-0 align-middle">
+                              <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Exercício 3</span> </a>
+                      </li>
+
+                      <li>
+                        <a href="../pages/4.html" class="nav-link px-0 align-middle">
+                            <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Exercício 4</span> </a>
+                    </li>
+
+                    <li>
+                      <a href="../pages/5.html" class="nav-link px-0 align-middle">
+                          <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Exercício 5</span> </a>
+                  </li>
+
+                  <li>
+                    <a href="../pages/6.html" class="nav-link px-0 align-middle">
+                        <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Exercício 6</span> </a>
+                </li>
+
+                <li>
+                  <a href="../pages/7.html" class="nav-link px-0 align-middle">
+                      <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Exercício 7</span> </a>
+              </li>
+                  </ul>
+                  <hr>
+                  <div class=" pb-4">
+                          <img src="../images/avatar.jpeg" alt="hugenerd" width="45" height="55" class="rounded-circle">
+                          <span class="d-none d-sm-inline mx-1">by Jésica Nagata</span>
+                  </div>
+              </div>
+          </div>
+          <div class="col py-3">
+              <h3>Exercício 3</h3>
+              <p class="lead">
+                Crie uma variável que recebe o valor fixo 5. Mostre a tabuada desse número.</p>
+                <div class="container p-5 my-5 border">
+
+                  <div class="col-md-12 text-center">
+                    <button onclick="tabuada()" type="button" class="btn btn-primary btn-lg btn-block">Ver o resultado</button>
+                </div>
+                <table class="table">
+                  <thead>
+                      <tr>
+                          <th scope="col">Tabuada</th>
+                      </tr>
+                  </thead>
+                  <tbody id="tbody">
+                  </tbody>
+              </table>
+                  
+                </div>
+          </div>
+      </div>
+  </div>
+
+  <script>
+    function tabuada(){
+      const tabuadaNumero = 5;
+
+      var tbody = document.getElementById('tbody');
+      tbody.innerHTML = '';
+
+      for(let i = 0; i <= 10; i++){
+        var tr = document.createElement('tr');
+        var td = document.createElement('td');
+
+        td.innerHTML = tabuadaNumero + " x " + i + " = " + i * tabuadaNumero;
+
+        tr.appendChild(td);
+        tbody.appendChild(tr);   
+      }
+    }
+  </script> 
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+</html>
